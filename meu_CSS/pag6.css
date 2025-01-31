@@ -14,3 +14,13 @@
 #contagem{
     font-size: 90px;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+  
+  th,td {
+    width: 25%;
+    overflow:auto;
+}

@@ -5,3 +5,13 @@
 textarea{
     resize: none;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+  
+  th,td {
+    width: 25%;
+    overflow:auto;
+}
