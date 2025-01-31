@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="shortcut icon" type="imagex/png" href="Icone do site.png">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="meu_CSS/pag5.css">
+</head>
+<body onload="MemoriaSecundaria()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="pag5.html">Organizador de tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="pag3.html">Cadastrar tarefas</a>
+            <a class="nav-item nav-link" href="pag4.html">Lista de tarefas</a>
+            <a class="nav-item nav-link active" href="pag5.html">Editar tarefas</a>
+            <a class="nav-item nav-link" href="pag6.html">Cronômetro</a>
+          </div>
+        </div>
+    </nav>      
+    
+    <div class="container">
+        <h1 class="display-3 text-center">Editar informações</h1>
+        <form action="" method="post" id="formulario">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <a href="pag2.html" class="btn btn-warning float-right">Sair</a>
+                </div>
+            </div>
+            <h1 class="display-5 text-center">Preencha somente o que quiser editar</h1>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="codigo">Código da tarefa</label>
+                    <input type="number" name="codigo" id="codigo" class="form-control" placeholder="Escreva o código de identificação da tarefa">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="tarefa">Tarefa</label>
+                    <input type="text" name="tarefa" id="tarefa" class="form-control" placeholder="Escreva o título da sua tarefa">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label for="data">Data</label>
+                    <input type="date" name="data" id="data" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="horario">Hora</label>
+                    <input type="time" name="horario" id="horario" class="form-control">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="" selected hidden>Selecione a categoria da sua tarefa</option>
+                        <option value="Lembretes">Lembretes</option>
+                        <option value="Afazeres">Afazeres</option>
+                        <option value="Estudos">Estudos</option>
+                        <option value="Esportes">Esportes</option>
+                        <option value="Entreternimento">Entreternimento</option>
+                        <option value="Social">Social</option>
+                        <option value="Finanças">Finanças</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" class="form-control" rows="4" placeholder="Escreva uma breve descrição da sua tarefa"></textarea>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success float-right" onclick="SalvarInfos()">Salvar</button>
+                </div>
+            </div>
+        </form>
+        <h1 class="display-3 text-center">Editar status</h1>
+        <form action="" method="post" id="formulario2">
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="codigo2">Código da tarefa</label>
+                <input type="number" name="codigo2" id="codigo2" class="form-control" placeholder="Escreva o código de identificação da tarefa">
+            </div>
+            <div class="col-md-6">
+                <label for="status">Novo status</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="" selected hidden>Qual o status dela agora?</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Executando">Executando</option>
+                    <option value="Concluída">Concluída</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-success float-right" onclick="SalvarStatus()">Salvar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.mask.js"></script>
+<script src="meu_JS/pag5.js"></script>
+</html>

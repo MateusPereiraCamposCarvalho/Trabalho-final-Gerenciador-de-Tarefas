@@ -1,0 +1,24 @@
+#login{
+    background-color: blueviolet;
+    color: white
+}
+
+#login:hover, #login:focus {
+    box-shadow: 0 0 0 0.2rem rgba(99, 3, 189, 0.5);
+    outline: none;
+}
+
+#senha{
+    background-color: blueviolet;
+    color: white
+}
+
+#senha:hover, #senha:focus {
+    box-shadow: 0 0 0 0.2rem rgba(99, 3, 189, 0.5);
+    outline: none;
+}
+
+#menor{
+    margin-top: 30px;
+    font-size: 40px;
+}

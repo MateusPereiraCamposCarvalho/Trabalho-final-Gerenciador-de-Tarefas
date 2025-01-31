@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="shortcut icon" type="imagex/png" href="Icone do site.png">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="meu_CSS/pag4.css">
+</head>
+<body onload="MemoriaSecundaria()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="pag4.html">Organizador de tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="pag3.html">Cadastrar tarefas</a>
+            <a class="nav-item nav-link active" href="pag4.html">Lista de tarefas</a>
+            <a class="nav-item nav-link" href="pag5.html">Editar tarefas</a>
+            <a class="nav-item nav-link" href="pag6.html">Cronômetro</a>
+          </div>
+        </div>
+    </nav>      
+    
+    <div class="container">
+        <h1 class="display-3 text-center">Lista de tarefa</h1>
+        <form action="" method="post" id="formulario">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <a href="pag2.html" class="btn btn-warning float-right">Sair</a>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="data">Data</label>
+                    <input type="date" name="data" id="data" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="status">Status</label>
+                    <select name="status" id="status" class="form-control">
+                        <option value="" selected hidden>Selecione quais tarefas mostrar</option>
+                        <option value="Todas">Todos os status (Exceto as canceladas)</option>
+                        <option value="Pendente">Pendentes</option>
+                        <option value="Executando">Executando</option>
+                        <option value="Concluída">Concluídas</option>
+                        <option value="Cancelada">Canceladas</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="" selected hidden>Selecione quais tarefas mostrar</option>
+                        <option value="Todas">Todas as categorias</option>
+                        <option value="Lembretes">Lembretes</option>
+                        <option value="Afazeres">Afazeres</option>
+                        <option value="Estudos">Estudos</option>
+                        <option value="Esportes">Esportes</option>
+                        <option value="Entreternimento">Entreternimento</option>
+                        <option value="Social">Social</option>
+                        <option value="Finanças">Finanças</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary float-right" onclick="Consultar()">Consultar</button>
+                </div>
+            </div>
+
+            <table id="tabela" class="table">
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Status</th>
+                        <th>Categoria</th>
+                        <th>Código</th>
+                        <th>Tempo realizando</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </form>
+
+        <h1 class="display-3 text-center">Detalhamento de tarefa</h1>
+        <form action="" method="post" id="formulario2">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="codigo">Código da tarefa</label>
+                    <input type="number" name="codigo" id="codigo" class="form-control" placeholder="Escreva o código de identificação da tarefa">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success float-right" onclick="Detalhar()">Detalhar</button>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="confTarefa">Título</label>
+                    <input type="text" name="confTarefa" id="confTarefa" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="confDescricao">Descrição</label>
+                    <textarea name="confDescricao" id="confDescricao" class="form-control" rows="4" readonly></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.mask.js"></script>
+<script src="meu_JS/pag4.js"></script>
+</html>

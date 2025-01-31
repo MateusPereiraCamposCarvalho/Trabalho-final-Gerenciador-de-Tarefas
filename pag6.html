@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="shortcut icon" type="imagex/png" href="Icone do site.png">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="meu_CSS/pag6.css">
+</head>
+<body onload="MemoriaSecundaria()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="pag6.html">Organizador de tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="pag3.html">Cadastrar tarefas</a>
+            <a class="nav-item nav-link" href="pag4.html">Lista de tarefas</a>
+            <a class="nav-item nav-link" href="pag5.html">Editar tarefas</a>
+            <a class="nav-item nav-link active" href="pag6.html">Cronômetro</a>
+          </div>
+        </div>
+    </nav>      
+    
+    <div class="container">
+        <h1 class="display-3 text-center">Cronômetro</h1>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="usuario">Usuário</label>
+                <input type="text" name="usuario" id="usuario" class="form-control" readonly>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <a href="pag2.html" class="btn btn-warning float-right">Sair</a>
+            </div>
+        </div>
+        <h1 class="display-4 text-center" id='contagem'>00:00:00</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-success" id="iniciar" onclick="Iniciar()">Iniciar</button>
+                    <button type="button" class="btn btn-warning" id="pausar" onclick="Pausar()">Pausar</button>
+                    <button type="button" class="btn btn-danger" id="parar" onclick="Parar()">Parar</button>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="menor" class="display-5 text-center">Caso queira salvar esse tempo em alguma tarefa escreva o código dela</h1>
+        <form action="" method="post" id="formulario">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="codigo">Código da tarefa</label>
+                    <input type="number" name="codigo" id="codigo" class="form-control" placeholder="Escreva o código de identificação da tarefa">
+                </div>
+            </div>
+        </form>
+
+        <table id="tabela" class="table">
+            <thead>
+                <tr>
+                    <th>Nº do Registro</th>
+                    <th>Tempo</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.mask.js"></script>
+<script src="meu_JS/pag6.js"></script>
+</html>
