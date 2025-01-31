@@ -64,9 +64,17 @@ function ApagarTabela(usuarios, x){
             var linha = tabela.getElementsByTagName("tr")
             var ndelinhas = linha.length
 
-            while(ndelinhas > 1){
+            var tabela2 = document.getElementById("tabela2")
+            var linha2 = tabela2.getElementsByTagName("tr")
+            var ndelinhas2 = linha2.length
+
+
+            while(ndelinhas > 1 && ndelinhas2 > 1){
                 tabela.deleteRow(ndelinhas - 1)
                 ndelinhas--
+
+                tabela2.deleteRow(ndelinhas2 - 1)
+                ndelinhas2--
             }
         }
 }
@@ -81,17 +89,27 @@ function EscreverTabela(usuarios, x, i){
     var coluna2 = linhas.insertCell(1)
     var coluna3 = linhas.insertCell(2)
     var coluna4 = linhas.insertCell(3)
-    var coluna5 = linhas.insertCell(4)
-    var coluna6 = linhas.insertCell(5)
-    var coluna7 = linhas.insertCell(6)
 
     coluna1.innerText = usuarios[x].tarefa[i]
     coluna2.innerText = usuarios[x].data[i]
     coluna3.innerText = usuarios[x].horario[i]
-    coluna4.innerText = usuarios[x].status[i]
-    coluna5.innerText = usuarios[x].categoria[i]
-    coluna6.innerText = usuarios[x].codigo[i]
-    coluna7.innerText = usuarios[x].cronometro[i]
+    coluna4.innerText = usuarios[x].cronometro[i]
+
+
+    var tabela2 = document.getElementById("tabela2")
+    var linha2 = tabela2.getElementsByTagName("tr")
+    var ndelinhas2 = linha2.length
+
+    var linhas2 = tabela2.insertRow(ndelinhas2)
+    var coluna1 = linhas2.insertCell(0)
+    var coluna2 = linhas2.insertCell(1)
+    var coluna3 = linhas2.insertCell(2)
+    var coluna4 = linhas2.insertCell(3)
+
+    coluna1.innerText = usuarios[x].tarefa[i]
+    coluna2.innerText = usuarios[x].categoria[i]
+    coluna3.innerText = usuarios[x].status[i]
+    coluna4.innerText = usuarios[x].codigo[i]
 }
 
 function Detalhar(){
