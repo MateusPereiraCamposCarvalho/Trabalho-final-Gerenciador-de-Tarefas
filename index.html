@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="meu_CSS/index.css">
 </head>
-<body onload="MemoriaSecundaria()">    
+<body onload="MemoriaSecundaria()">      
     <div class="container">
         <h1 class="display-4 text-center">Cadastro de usuário</h1>
         <h1 id="menor" class="display-5 text-center">Bem-vindo ao melhor gerenciador de tarefas já feito!</h1>
@@ -25,12 +25,12 @@
                     <input type="password" name="senha" id="senha" class="form-control">
                 </div>
             </div>
-            <div class="row form-group">
-                <div class="col-md-1">
-                    <button type="button" class="btn btn-warning float-left" onclick="Autenticar()">Autenticar usuário</button>
-                </div>
-                <div class="col-md-11">
-                    <button type="button" class="btn btn-success float-right" onclick="Cadastrar()">Cadastrar</button>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-warning float-left" onclick="Autenticar()">Autenticar usuário</button>
+                        <button type="button" class="btn btn-success float-right" onclick="Cadastrar()">Cadastrar</button>
+                    </div>
                 </div>
             </div>
         </form>
